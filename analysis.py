@@ -1,21 +1,48 @@
-from sklearn import datasets
+#Importing Libraries
 import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+import csv
 
-# load iris dataset
-iris = datasets.load_iris()
-# Since this is a bunch, create a dataframe
-iris_df=pd.DataFrame(iris.data)
-iris_df['class']=iris.target
+#Importing data from csv file
+df = pd.read_csv('IrisDataset.csv')
+#Defining sepal lengh to numpy
+sepal_length = df['sepal_length'].to_numpy()
 
-iris_df.columns=['sepal_len', 'sepal_wid', 'petal_len', 'petal_wid', 'class']
-iris_df.dropna(how="all", inplace=True) # remove any empty lines
+#Plotting Histogram
+plt.hist(sepal_length, color='indigo', edgecolor= 'black')
+# create title
+plt.title('Sepal Lengh Histogram')
+plt.show ()
+#Save plot
+plt.savefig('Histogram_Sepal_Lengh.png')
 
-#selecting only first 4 columns as they are the independent(X) variable
-# any kind of feature selection or correlation analysis should be first done on these
-iris_X=iris_df.iloc[:,[0,1,2,3]]
-#print(iris_X)
-df = pd.DataFrame
+#Defining sepal width to numpy
+sepal_width = df['sepal_width'].to_numpy()
+#Plotting Histogram
+plt.hist(sepal_width, color='indigo', edgecolor= 'black')
+# create title
+plt.title('Sepal Widht Histogram')
+plt.show ()
+#Save plot
+plt.savefig('Histogram_Sepal_Widht.png')
 
-path = ".//"
-csvFilename = path + 'IrisDataset.csv'
-df.to_csv(csvFilename)
+#Defining Petal Lenght to numpy
+petal_length = df['petal_length'].to_numpy()
+#Plotting Histogram
+plt.hist(petal_length, color='indigo', edgecolor= 'black')
+# create title
+plt.title('Petal Lenght Histogram')
+plt.show ()
+#Save plot
+plt.savefig('Histogram_Petal_Lengh.png')
+
+#Defining Petal Lenght to numpy
+petal_width = df['petal_width'].to_numpy()
+#Plotting Histogram
+plt.hist(petal_width, color='indigo', edgecolor= 'black')
+# create title
+plt.title('Petal Width Histogram')
+plt.show ()
+#Save plot
+plt.savefig('Histogram_Petal_widht.png')
