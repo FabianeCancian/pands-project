@@ -1,0 +1,4 @@
+This is the mean for sepal lenght: 5.843333333333334
+This is the mean for sepal width: 3.054
+This is the mean for petal lenght: 3.7586666666666666
+This is the mean for petal lenght: 1.1986666666666668
