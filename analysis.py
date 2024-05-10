@@ -3,6 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 import csv
+import seaborn as sns
 
 #Importing data from csv file
 df = pd.read_csv('IrisDataset.csv')
@@ -90,16 +91,12 @@ mode()
 f.close()
 
 #Scatter plots
-import seaborn as sns
 iris = sns.load_dataset('iris')
 
 # Data preprocessing
 # Separate features and target variable
 X = iris.drop('species', axis=1)
 y = iris['species']
-
-# Data processing
-# Perform any necessary data processing steps here
 
 # Data analysis
 # Calculate summary statistics
@@ -112,3 +109,5 @@ sns.set(style="ticks")
 sns.pairplot(iris, hue="species", palette='mako')
 plt.savefig('Scatterplot_sepal.png')
 plt.show ()
+
+#Further analysis and comments about plots are on Jupyter Notebook
