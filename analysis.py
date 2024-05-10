@@ -60,7 +60,55 @@ def mean ():
     f.write("This is the mean for petal width: ")
     f.write(str(statistics.mean(petal_width))+ '\n')
 
-#Creating a file for the summary of each variable and write the output of the above function on the archive. 
+# this function will calculate and write the median of each variable on dataset. 
+def median ():
+    f.write("This is the median for sepal lenght: ")
+    f.write(str(statistics.median(sepal_length)) + '\n')
+    f.write("This is the median for sepal width: ")
+    f.write(str(statistics.median(sepal_width)) + '\n')
+    f.write("This is the median for petal lenght: ")
+    f.write(str(statistics.median(petal_length))+ '\n')
+    f.write("This is the median for petal width: ")
+    f.write(str(statistics.median(petal_width))+ '\n')
+
+# this function will calculate and write the median of each variable on dataset. 
+def mode ():
+    f.write("This is the mode for sepal lenght: ")
+    f.write(str(statistics.mode(sepal_length)) + '\n')
+    f.write("This is the mode for sepal width: ")
+    f.write(str(statistics.mode(sepal_width)) + '\n')
+    f.write("This is the mode for petal lenght: ")
+    f.write(str(statistics.mode(petal_length))+ '\n')
+    f.write("This is the mode for petal width: ")
+    f.write(str(statistics.mode(petal_width))+ '\n')
+
+#Creating a file for the summary of each variable and write the output of the above functions on the archive. 
 f = open("variables.txt", "w")
 mean()
+median ()
+mode()
 f.close()
+
+#Scatter plots
+import seaborn as sns
+iris = sns.load_dataset('iris')
+
+# Data preprocessing
+# Separate features and target variable
+X = iris.drop('species', axis=1)
+y = iris['species']
+
+# Data processing
+# Perform any necessary data processing steps here
+
+# Data analysis
+# Calculate summary statistics
+summary_stats = X.describe()
+print("Summary Statistics:")
+print(summary_stats)
+
+# Plot the graph using Seaborn and Matplotlib
+sns.set(style="ticks")
+sns.pairplot(iris, hue="species", palette='mako')
+plt.savefig('Scatterplot_sepal.png')
+plt.show ()
