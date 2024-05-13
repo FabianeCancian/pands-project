@@ -28,3 +28,6 @@ The Iris flower data set is a multivariate dataset introduced by the British sta
 - [Statistics on Python](https://www.w3schools.com/python/ref_stat_mean.asp)
 - [Scatter plot Seaborn](https://seaborn.pydata.org/generated/seaborn.scatterplot.html)
 - [Plotting Iris dataset with Seaborn](https://www.tutorialspoint.com/plotting-graph-for-iris-dataset-using-seaborn-and-matplotlib)
+- [Seaborn Heatmap](https://seaborn.pydata.org/examples/structured_heatmap.html)
+- [Bar chart with Seaborn](https://seaborn.pydata.org/examples/histogram_stacked.html)
+- [Comparing two variables](https://github.com/ianmcloughlin/mywork/blob/main/iris.ipynb)
