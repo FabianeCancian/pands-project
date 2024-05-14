@@ -31,3 +31,4 @@ The Iris flower data set is a multivariate dataset introduced by the British sta
 - [Seaborn Heatmap](https://seaborn.pydata.org/examples/structured_heatmap.html)
 - [Bar chart with Seaborn](https://seaborn.pydata.org/examples/histogram_stacked.html)
 - [Comparing two variables](https://github.com/ianmcloughlin/mywork/blob/main/iris.ipynb)
+- [Pivot table Pandas](https://pandas.pydata.org/docs/reference/api/pandas.pivot_table.html)
